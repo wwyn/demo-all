@@ -1,0 +1,80 @@
+<view>
+  <checkbox-group bindchange="checkboxChange">
+    <label class="checkbox" wx:for="{{items}}" wx:key="{{ name }}" wx:for-item="item">
+      <image class="{{item.checked ? 'checked' : ''}}" src="../../img/Bitmap.png"></image>
+      <checkbox value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+    </label>
+  </checkbox-group>
+  <!-- 选择器 -->
+  <view class="section">
+    <view class="section__title">普通选择器</view>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view class="picker">
+        当前选择：{{array[index]}}
+      </view>
+    </picker>
+  </view>
+  <view class="section">
+    <view class="section__title">多列选择器</view>
+    <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+      <view class="picker">
+        当前选择：{{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}}
+      </view>
+    </picker>
+  </view>
+  <view class="section">
+    <view class="section__title">时间选择器</view>
+    <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+      <view class="picker">
+        当前选择: {{time}}
+      </view>
+    </picker>
+  </view>
+
+  <view class="section">
+    <view class="section__title">日期选择器</view>
+    <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+      <view class="picker">
+        当前选择: {{date}}
+      </view>
+    </picker>
+  </view>
+  <view class="section">
+    <view class="section__title">省市区选择器</view>
+    <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+      <view class="picker">
+        当前选择：{{region[0]}}，{{region[1]}}，{{region[2]}}
+      </view>
+    </picker>
+  </view>
+  <audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" controls loop></audio>
+
+<button type="primary" bindtap="audioPlay">播放</button>
+<button type="primary" bindtap="audioPause">暂停</button>
+<button type="primary" bindtap="audio14">设置当前播放时间为14秒</button>
+<button type="primary" bindtap="audioStart">回到开头</button>
+<!-- map.wxml -->
+<map id="map" longitude="113.324520" latitude="23.099994" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 300px;"></map>
+</view>
+<view class="picker-view" animation="{{animationAddressMenu}}" style="visibility:{{addressMenuIsShow ? 'visible':'hidden'}}">
+  <view style="height:10% ;width:95%;margin-top:10rpx">
+    <text catchtap="cityCancel">取消</text>
+    <text style="float: right" catchtap="citySure">确定</text>
+  </view>
+  <!--"可以显示默认的城市，使用后级联选择城市反应很慢就不使用了-->
+  <picker-view style="width: 100%; height: 300px;" bindchange="cityChange" value="{{value}}" wx:key="">
+    <picker-view-column>
+      <view wx:for="{{provinces}}" class="picker-item">
+        {{item.name}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{citys}}" class="picker-item" wx:key="">
+        {{item.name}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{areas}}" class="picker-item" wx:key="">
+        {{item.name}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>
+<navigator url="/pages/submit/submit">跳转</navigator>

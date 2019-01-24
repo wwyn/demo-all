@@ -1,0 +1,28 @@
+<!--pages/drag/drag.wxml-->
+<view>
+  <view catchtap='addImg' class="addImg" style="background:url('{{bgImg}}')">
+    <view 
+        style="top:{{item.top}}px;left:{{item.left}}px;"
+        bindtouchmove="ballMoveEvent" 
+        data-index="{{ index }}" 
+        catchtap='stop' 
+        class="inpbox {{ item.classList.textAlign }} {{ item.classList.styles }} {{ selectIndex === index ? 'active' : '' }}"
+        wx:for="{{ addTextList }}">
+        
+        {{ item.text }}
+      <image  wx:if="{{ selectIndex === index }}" class="del" src="../../img/del.png" catchtap='delete'></image>
+    </view>
+  </view>
+  <view bindtap='addText'>添加文字</view><input focus="true" class="addText" bindchange="inputText" value="{{inputVal}}" focus="true" ></input><view bindtap='affirm'>确认</view>
+  <view class="editor">
+    <view data-class="left" bindtap="setClass">居左</view>
+    <view data-class="right" bindtap='setClass'>居右</view>
+    <view data-class="center" bindtap='setClass'>居中</view>
+    <view data-class="strong" bindtap='setStyles'>加粗</view>
+    <view data-class="incline" bindtap='setStyles'>倾斜</view>
+    <view>复制</view>
+  </view>
+  <canvas canvas-id="columnCanvas" disable-scroll="true" class="pieCanvas" style="width:300px; height:200px;"></canvas>
+  <view bindtap='seven'>7天</view>
+   
+</view>

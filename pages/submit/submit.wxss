@@ -1,0 +1,217 @@
+/* pages/submit/submit.wxss */
+@import "../../wxParse/wxParse.wxss";
+
+input {
+  border: 1px solid #ccc;
+}
+
+.meg {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid red;
+}
+
+.sj {
+  text-align: center;
+}
+
+.yhq {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: #ec5428;
+  border-radius: 12rpx;
+  height: 180rpx;
+  color: #fff;
+  box-sizing: border-box;
+  padding-left: 20rpx;
+}
+
+.hb {
+  width: 470rpx;
+  height: 100%;
+  position: relative;
+}
+
+.hb view:nth-child(1) {
+  margin-top: 20rpx;
+  font-size: 28rpx;
+}
+
+.hb view:nth-child(2) {
+  font-size: 26rpx;
+  margin-top: 6rpx;
+}
+
+.hb view:nth-child(3) {
+  font-size: 24rpx;
+  margin-top: 12rpx;
+}
+
+.bfb {
+  flex: 1;
+  font-size: 26rpx;
+  border-left: 1px dashed #fff;
+  padding-left: 40rpx;
+  text-align: center;
+  padding-top: 20rpx;
+  box-sizing: border-box;
+}
+
+.progress {
+  width: 160rpx;
+  height: 18rpx;
+  padding: 4rpx;
+  box-sizing: border-box;
+  border-radius: 8rpx;
+  background-color: #cd3f0d;
+  margin: auto;
+  margin-top: 10rpx;
+}
+
+.progress-bar {
+  height: 10rpx;
+  width: 1%;
+  background-color: #fff;
+  border-radius: 4rpx;
+  margin: auto;
+  margin-left: 0;
+}
+
+.lq {
+  width: 90rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  border-radius: 100%;
+  border: 1px solid #fff;
+  color: #fff;
+  text-align: center;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+  margin: auto;
+}
+
+.yuan-t {
+  border-radius: 0 0 96rpx 96rpx;
+  height: 24rpx;
+  width: 48rpx;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  right: -24rpx;
+}
+
+.yuan-b {
+  border-radius: 96rpx 96rpx 0 0;
+  height: 24rpx;
+  width: 48rpx;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  right: -24rpx;
+}
+/* 加载更多 */
+.cars {
+  display: flex;
+  align-items: center;
+  justify-content:flex-start;
+  flex-wrap: wrap;
+}
+.cars .cars-list {
+  width: 32%;
+  text-align: center;
+  border: 1px solid red;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-bottom: 6rpx;
+  margin-left: 6rpx;
+}
+.canvas {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(000,000,000,0.5);
+}
+.canvas-img {
+  width: 300rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  background-color: #cdaa0d;
+  color: #fff;
+  margin: 20rpx auto;
+  border-radius: 10rpx;
+}
+.created {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(000,000,000,0.5);
+  padding: 40rpx;
+  box-sizing: border-box;
+  z-index: 999;
+}
+.created-text {
+  width: 100%;
+  height: 93%;
+  background-color: #fff;
+  padding: 50rpx;
+  box-sizing: border-box;
+}
+.created-nick {
+  font-size: 28rpx;
+  color: #000;
+  font-weight: 700;
+  margin-bottom: 20rpx;
+}
+.created-time {
+  font-size: 24rpx;
+  color: #ccc;
+  margin-bottom: 30rpx;
+}
+.created image {
+  display: block;
+  margin: 0 auto;
+  width: 500rpx;
+  height: 500rpx;
+}
+.created-describe {
+  font-size: 32rpx;
+  color: #000;
+  font-weight: 700;
+  margin-top: 40rpx;
+}
+.draw-content{
+  width: 750rpx;
+  height: 750rpx;
+  margin-top: 34rpx;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #ccc
+}
+.look-image{
+  width: 750rpx;
+  height: 750rpx;
+}
+.litlelooks-wrap{
+  position: absolute;
+  width: 120rpx;
+  height: 120rpx;
+}
+.close{
+  position: absolute;
+  right: -20rpx;
+  top: -20rpx;
+  width: 38rpx;
+  height:38rpx;
+}
+.litlelooks-image{
+  width: 120rpx;
+  height:120rpx;
+}

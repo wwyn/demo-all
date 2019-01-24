@@ -1,0 +1,28 @@
+<!--pages/discounts/discounts.wxml-->
+<!-- 优惠卷 -->
+<view class="my-discounts">
+  <view class="discounts">
+    <view bindtap='tabDiscounts' class="{{ index==count?'active':'' }}" wx:for="{{ youhuiList }}" wx:for-item="item" wx:key="key" w:index="index" data-idx="{{ index }}">{{ item }}</view>
+  </view>
+  <view class="dingdan">
+    <view class="dingdan-title">
+      <view>订单号：2637484738</view>
+      <view>待支付</view>
+    </view>
+    <view class="dingdan-xiangqing">
+      <image src="../../img/bbbb.png"></image>
+      <view class="dingdan-text">
+        <view>别克威朗权益蓝牙音响</view>
+        <view>价值1999元权益礼包</view>
+        <view>
+          <view>适用于别克君威B类车</view>
+          <view>2018.9.1-2018.12.31</view>
+        </view>
+      </view>
+    </view>
+    <view class="dingdan-button">
+      <button bindtap='toDetail'>查看详情</button>
+      <button>去支付</button>
+    </view>
+  </view>
+</view>

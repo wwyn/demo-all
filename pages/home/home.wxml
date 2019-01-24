@@ -1,0 +1,59 @@
+<!--pages/home/home.wxml-->
+<!-- 入住首页 -->
+<view class="enter" style="background:url(../../img/enter.png);background-size: 100%;">
+  <view class="notice" bindtap="notice">入住需知</view>
+  <view class="conter">
+    <view>
+      <view>
+        <image src="../../img/group9.png"></image>
+      </view>
+      <view class="text">
+        <text>低门槛 易操作</text>
+        <text>无需绑定微信小程序, 达人和企业主都能申请</text>
+      </view>
+    </view>
+    <view>
+      <view>
+        <image src="../../img/group11.png"></image>
+      </view>
+      <view class="text">
+        <text>独立店铺 自由装修</text>
+        <text>独立店铺、独立推广码, 可视化编辑装修</text>
+      </view>
+    </view>
+    <view>
+      <view>
+        <image src="../../img/group12.png"></image>
+      </view>
+      <view class="text">
+        <text>独立管理后台</text>
+        <text>商品管理、订单管理、会员管理</text>
+      </view>
+    </view>
+    <view>
+      <view>
+        <image src="../../img/group13.png"></image>
+      </view>
+      <view class="text">
+        <text>丰富的营销拓客工具</text>
+        <text>拼团、促销、预售、优惠券、线下活动</text>
+      </view>
+    </view>
+  </view>
+  <view class="expert" bindtap="toFrom">我是达人, 立刻入驻</view>
+  <view class="enterprise" bindtap="toFrom">我是企业, 立刻入驻</view>
+</view>
+<view wx:if="{{ isShow }}" class="modal">
+  <view class="content">
+    <view class="del">
+      <view>商家入住须知</view>
+      <image bindtap='del' src="../../img/del.png"></image>
+    </view>
+    <view class="txt">
+      <text>1、商城有权根据（包括但不仅限于）品牌需求、公司经营状况、服务水平等其他因素退回客户申请；</text>
+      <text> 2、商城有权在申请入驻及后续经营阶段要求客户提供其他资质；商城将结合各行业发展动态、国家相关规定及消费者购买需求，不定期更新招商标准；</text>
+      <text> 3、申请企业须确保其申请入驻及后续经营阶段提供的相关资质的真实性（若企业提供的相关资质如商标注册证、授权书等由第三方提供，请务必先行核实文件的真实有效性），一旦发现虚假资质，申请企业将被商城列入非诚信客户名单，并不再进行合作；</text>
+      <text>4、商城暂不接受未取得国家商标总局颁发的商标注册证或商标受理通知书的品牌开店申请（部分类目的进口商品除外），亦不接受纯图形类商标的入驻申请。</text>
+     </view>
+  </view> 
+</view>

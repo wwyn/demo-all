@@ -1,0 +1,7 @@
+<!--pages/generate/generate.wxml-->
+<view class="generate">
+   <view>连接地址</view>
+    <view class="address"></view><text class="copy" bindtap='copy' data-address="ssss">复制</text>
+    <view class="expert" bindtap="QRcode">生成店铺二维码</view>
+  <view class="enterprise" bindtap="toGeneralize">生成推广海报</view>
+</view>

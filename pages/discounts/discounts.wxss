@@ -1,0 +1,139 @@
+/* pages/discounts/discounts.wxss */
+
+.my-discounts {
+  background: rgba(245, 244, 244, 1);
+  height: 100vh;
+}
+
+.discounts {
+  display: flex;
+  justify-content: space-around;
+  height: 88rpx;
+  background-color: #fff;
+  line-height: 88rpx;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.discounts view {
+  text-align: center;
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+}
+
+.active {
+  color: rgba(214, 57, 26, 1);
+  border-bottom: 2px solid rgba(214, 57, 26, 1);
+}
+
+.dingdan {
+  margin-top: 20rpx;
+  background-color: #fff;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+
+.dingdan-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 24rpx;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.dingdan-title view:nth-child(1) {
+  font-size: 26rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+}
+
+.dingdan-title view:nth-child(2) {
+  font-size: 26rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(214, 57, 26, 1);
+}
+
+.dingdan-xiangqing {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 30rpx;
+  box-sizing: border-box;
+}
+
+.dingdan-xiangqing image {
+  width: 222rpx;
+  height: 222rpx;
+  vertical-align: middle;
+}
+
+.dingdan-text {
+  flex: 1;
+  margin-left: 24rpx;
+}
+
+.dingdan-text view:nth-child(1) {
+  font-size: 30rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+}
+
+.dingdan-text view:nth-child(2) {
+  font-size: 30rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(213, 57, 26, 1);
+}
+.dingdan-text view:nth-child(3) {
+  margin-top: 36rpx;
+}
+
+.dingdan-text view:nth-child(3) view{
+  font-size: 22rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(102, 102, 102, 1);
+}
+
+.dingdan-button {
+  margin-top: 30rpx;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  padding-top: 22rpx;
+  box-sizing: border-box;
+  text-align: right;
+  
+}
+
+.dingdan-button button:nth-child(1) {
+  width: 150rpx;
+  height: 48rpx;
+  background: rgba(249, 245, 232, 1);
+  border-radius: 24rpx;
+  border: 1px solid rgba(198, 160, 27, 1);
+  text-align: center;
+  font-size: 26rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(198, 160, 27, 1);
+  margin-right: 52rpx;
+  display: inline-block;
+  line-height: 48rpx;
+}
+
+.dingdan-button button:nth-child(2) {
+  width: 150rpx;
+  height: 48rpx;
+  background:rgba(214,57,26,1);
+  border-radius: 24rpx;
+  text-align: center;
+  font-size: 26rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color:rgba(255,255,255,1);
+  display: inline-block;
+  line-height: 48rpx;
+}

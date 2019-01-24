@@ -1,0 +1,82 @@
+/* pages/drag/drag.wxss */
+.addImg {
+  width: 100%;
+  height: 400rpx;
+  background-size: contain;
+  position: relative;
+}
+.addText {
+  border: 1px solid #ccc;
+  outline: none;
+  width: 100%;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+}
+.vText {
+  border: none;
+  outline: none;
+}
+.inpbox {
+  width: 50%;
+  position: absolute;  
+  top:0;
+  left:0; 
+  z-index: 100; 
+}
+.editor {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.editor view {
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.active {
+    border: 1px solid red;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.center {
+    text-align: center;
+}
+
+.strong {
+    font-weight: 700;
+}
+.incline {
+    font-style: oblique;
+}
+.del {
+  width: 50rpx;
+  height: 50rpx;
+  float: left;
+}
+.content {
+  width: 100%;
+  background-color: #F2F2F2;
+  overflow-y: auto;
+}
+#mychart-one {
+  position: absolute; 
+  top: 0;
+  height: 50%;
+  left: 0;
+  right: 0;
+}
+#mychart-two {
+  position: absolute; 
+  top: 50%;
+  height: 50%;
+  left: 0;
+  right: 0;
+}

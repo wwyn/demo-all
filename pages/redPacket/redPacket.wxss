@@ -1,0 +1,47 @@
+/* pages/redPacket/redPacket.wxss */
+
+.redPacket {
+  text-align: center;
+}
+
+.redPacket image:nth-child(1) {
+  width: 492rpx;
+  height: 625rpx;
+  display: block;
+  margin: 10rpx auto;
+  margin-top: 50rpx;
+}
+
+.redPacket image:nth-child(2) {
+  width: 71rpx;
+  height: 71rpx;
+  display: block;
+  margin: 20rpx auto;
+}
+
+.openRed {
+  width: 570rpx;
+  height: 790rpx;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin: 50rpx auto;
+  text-align: center;
+  position: relative;
+}
+.openRed image:nth-child(1) {
+  width: 87rpx;
+  height: 90rpx;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.openRed image:nth-child(2) {
+  width: 300rpx;
+  height: 78rpx;
+  display: block;
+  position: absolute;
+  bottom: 40rpx;
+  left: 50%;
+  margin-left: -150rpx;
+}

@@ -1,0 +1,76 @@
+<!--pages/submit/submit.wxml-->
+<view>
+  <form bindsubmit="formSubmit">
+    <text>收件姓名:</text>
+    <input type="text" name="consignee" value='{{form_info}}'></input>
+    <text>电话:</text>
+    <input type="text" name="mobile" value='{{form_info}}'></input>
+    <text>地址:</text>
+    <input type="text" name="address" value='{{form_info}}'></input>
+    <text>邮编:</text>
+    <input type="text" name="zipcode" value='{{form_info}}'></input>
+    <button formType="submit">提交</button>
+  </form>
+  <view wx:if="{{ userInfo.length > 0 }}" class="meg" wx:for="{{ userInfo }}" wx:for-item="item" wx:key="key" wx:for-index="idx">
+    <text>{{ idx + 1 }}</text>
+    <text>{{ item.consignee }}</text>
+    <text>{{ item.mobile }}</text>
+    <text>{{ item.address }}</text>
+    <text bindtap='del' data-index="{{ idx }}">删除</text>
+  </view>
+  <view class="sj" wx:if="{{ userInfo.length == 0 }}">暂无数据</view>
+</view>
+
+
+<view bindtap='createImg'>生成图片</view>
+<view catchtap='xiaoshi' class="created" wx:if="{{ show }}">
+  <view catchtap='zuzhi' class="created-text">
+    <view class="created-nick">昵称</view>
+    <view class="created-time">时间</view>
+    <image src="../../img/Bitmap.png"></image>
+    <textarea minlength="{{min}}" maxlength="{{maxtext}}" class="created-describe" value="太阳"></textarea>
+  </view>
+  <view class="canvas-img" catchtap='saveImageToPhoto'>保存到相册</view>
+</view>
+<view wx:if="{{ !showcanvas }}">
+  <canvas canvas-id="shareCanvas" style="width:600rpx;height:300rpx"></canvas>
+</view>
+
+<view class="yhq">
+  <view class="hb">
+    <view>新人红包</view>
+    <view>新人立减10元红包</view>
+    <view>有效期：18-06-25至45-11-10</view>
+    <view class="yuan-t"></view>
+    <view class="yuan-b"></view>
+  </view>
+  <view class="bfb">
+    <view>已抢{{ number }}%</view>
+    <view class="progress">
+      <view class="progress-bar" style="width:{{ number }}%"></view>
+    </view>
+    <view class="lq" bindtap='receive'>领取</view>
+  </view>
+</view>
+<view bindtap='tiaozhuan'>跳转</view>
+<view bindtap='tiaozhuanh5'>跳转h5</view>
+<rankList />
+<!-- 查看更多 -->
+<view class="cars">
+  <view wx:if="{{ index < max || isExpand }}" class="cars-list" wx:for="{{ carsList }}" wx:for-item="item" wx:key="key">
+    <view>{{ item.name }}</view>
+  </view>
+  <view bindtap='lookMore' wx:if="{{ !isExpand }}" class="cars-list">查看更多</view>
+  <!-- //导入文件 
+  <import src="../../wxParse/wxParse.wxml" />
+  //引用模版 
+  <template is="wxParse" data="{{wxParseData:article.nodes}}" /> -->
+  <!-- /** data中的article为bindName */ -->
+  <view class='draw-content'>
+    <image src='../../img/bbbb.png' class="look-image"></image>
+    <view class='litlelooks-wrap' bindtouchmove="imagetouchmove" style='left:{{leftLooks}}px;top:{{topLooks}}px;'>
+      <image class='close' src="../../img/del.png" bindtap='hideLooks'></image>
+      <image class='litlelooks-image' src='../../img/zhong.png '></image>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,29 @@
+<!--pages/generalize/generalize.wxml-->
+<view class="generalize">
+  <view class="generalize-pic">
+    <view>
+      <image class="image {{ isLeft?'click':'' }}" src=""></image>
+      <view wx:if="{{ !isLeft }}" data-click="1" bindtap='click'></view>
+      <view class="Chosen" wx:if="{{ isLeft }}" style="background:url(../../img/true.png) center;background-size:100%;"></view>
+    </view>
+    <view>
+      <image class="image {{ isRight?'click':'' }}" src=""></image>
+      <view wx:if="{{ !isRight }}" data-click="2" bindtap='click'></view>
+      <view class="Chosen" wx:if="{{ isRight }}" style="background:url(../../img/true.png) center;background-size:100%;"></view>
+    </view>
+  </view>
+  <view class="send">
+    <view>
+      <image src="../../img/friend.png"></image>
+      <view>朋友圈</view>
+    </view>
+     <view>
+      <button class="btn" open-type="share" hover-class="none"><image src="../../img/weixin.png"></image></button>
+      <view>微信</view>
+    </view>
+     <view>
+      <image bindtap='savePhoto' class="photo"  src="../../img/picture.png"></image>
+      <view>保存到相册</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,12 @@
+<!--pages/audit/audit.wxml-->
+<!-- 审核 -->
+<view wx:if="{{ isAudit }}" class="audit">
+  <image src="../../img/time.png"></image>
+  <view>正在审核中, 请耐心等待…</view>
+</view>
+<view wx:if="{{ isFail }}" class="fail">
+  <image src="../../img/fail.png"></image>
+  <view class="fail-txt">审核失败</view>
+  <view class="expert" bindtap="toFrom">我是达人, 立刻入驻</view>
+  <view class="enterprise" bindtap="toFrom">我是企业, 立刻入驻</view>
+</view>

@@ -1,0 +1,38 @@
+/* pages/adress/adress.wxss */
+
+.section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 690rpx;
+  height: 98rpx;
+  line-height: 98rpx;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+  margin: auto;
+}
+
+.section view {
+  margin-right: 20rpx;
+}
+
+button {
+  width: 690rpx;
+  height: 80rpx;
+  background: rgba(214, 57, 26, 1);
+  border-radius: 44rpx;
+  color: #fff;
+  margin-top: 142rpx;
+}
+.list {
+  padding: 10rpx;
+  text-align: center;
+  border: 1px solid #ccc;
+} 
+.list text {
+  padding: 8rpx;
+  border: 1px solid red;
+}

@@ -1,0 +1,41 @@
+<!--pages/user/user.wxml-->
+<view wx:if="{{ business }}" class="user">
+  <view class="user-head">
+    <view class="user-pic">
+      <view>
+        <image class="user-img" src="../../img/Bitmap.png"></image>
+      </view>
+      <view class="user-txt">
+        <view>明晨文具</view>
+        <view>ehu34583647567</view>
+        <view>营业中</view>
+      </view>
+    </view>
+    <view>
+      <image bindtap='share' class="share" src="../../img/share.png"></image>
+    </view>
+  </view> 
+  <view class="line"></view>
+  <view class="backstage">
+    <view class="backstage-txt">商家管理后台</view>
+    <view>
+      <image src="../../img/why.png"></image>
+    </view>
+  </view>
+  <view class="line-sm"></view>
+  <view class="backstage-from">
+    <view>后台地址</view>
+    <view class="address"></view><text class="copy" bindtap='copy' data-address="ssss">复制</text>
+    <view>后台地址</view>
+    <input></input>
+    <view>初始密码</view>
+    <input></input>
+  </view>
+</view>
+<view class="shut-down" wx:if="{{ !business }}">
+  <view class="business-stop">
+    <image src="../../img/Bitmap.png"></image>
+    <view >已停业</view>
+  </view>
+   <view class="expert" bindtap="toFrom">申请恢复营业</view>
+</view>

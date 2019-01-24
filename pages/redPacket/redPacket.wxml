@@ -1,0 +1,11 @@
+<!--pages/redPacket/redPacket.wxml-->
+<view class="redPacket" wx:if="{{ !openRed }}">
+  <image src="../../img/Group 2.png" bindtap='openRed'></image>
+  <image src="../../img/Group.png"></image>
+</view>
+<view wx:if="{{ openRed }}">
+  <view class="openRed" style="background:url('../../img/open.png') no-repeat;background-size: 100%">
+    <image src="../../img/Group 4.png"></image>
+    <image src="../../img/Group 7.png" bindtap='getredPacket'></image>
+  </view>
+</view>

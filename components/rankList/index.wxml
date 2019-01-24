@@ -1,0 +1,27 @@
+ <view class='tabContentItems'>
+      <block>
+        <view bindtap="evt_goto" class='tabContentItem' wx:for-index="index">
+          <view class="rank-img">
+            <view wx:if="{{ index < 4 }}"  class="rank-top">
+              <view>TOP</view><view>{{ index }}</view>
+            </view>
+            <image mode="aspectFit" class=""></image>
+          </view>
+          <view class="rank-txt">
+            <view class="rank-title">别克威朗</view>
+            <view class="rank-money">价值1111</view>
+            <view class="rank-fl">
+              <view class="rank-time">
+                <view>适用于别克</view>
+                <view>时间</view>
+              </view>
+              <view wx:if="{{ shop }}" class="rank-shop">去抢订</view>
+              <view wx:if="{{ !shop }}" class="rank-get">已领取</view>
+            </view>
+          </view>
+        </view>
+      </block>
+      <!-- <block wx:else>
+        <view>no data</view>
+      </block> -->
+    </view>

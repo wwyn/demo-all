@@ -1,0 +1,16 @@
+<!--pages/drag/drag.wxml-->
+<view>
+  <view catchtap='addImg' class="addImg" style="background:url('{{bgImg}}')">
+    <view style="top:{{ballTop}}px;left:{{ballLeft}}px; text-align:{{style}};border:{{bor}};font-weight:{{strong}};font-style:{{incline}}" bindtouchmove="ballMoveEvent" catchtap='stop' class="inpbox"  wx:for="{{ addTextList }}" wx:for-item="item" wx:key="key">{{ item }}</view>
+  </view>
+  <view bindtap='addText'>添加文字</view><input focus="true" class="addText" bindchange="inputText" value="{{inputVal}}" focus="true" ></input><view bindtap='affirm'>确认</view>
+  <view class="editor">
+    <view data-style="left" bindtap="textAlign">居左</view>
+    <view data-style="right" bindtap='textAlign'>居右</view>
+    <view data-style="center" bindtap='textAlign'>居中</view>
+    <view bindtap='strong'>加粗</view>
+    <view bindtap='incline'>倾斜</view>
+    <view bindtap='clone'>复制</view>
+  </view>
+  <canvas canvas-id="columnCanvas" disable-scroll="true" class="pieCanvas" style="width:300px; height:300px;"></canvas>
+</view>

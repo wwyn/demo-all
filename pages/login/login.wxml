@@ -1,0 +1,17 @@
+<!--pages/login/login.wxml-->
+<view class="login">
+  <view class="number">
+    <view>
+      手机号 <input vaule="{{ mobile }}" bindinput="mobileInput"></input> |<button bindtap='getMobile' disabled="{{ disabled }}"  class="yanzhengma">{{yanzhengma}}</button>
+    </view>
+    <view>
+      验证码 <input vaule="{{ verification }}" bindblur="verification"></input>
+    </view>
+  </view>
+  <button bindtap='submit'>登录</button>
+  <view class="xieyi">如您输入的手机号为注册，将为您直接注册。注册即视为同意<text>《用户注册协议》</text></view>
+  <view wx:if="{{hasUserInfo}}">
+     <button class="empower-btn" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo"> 登录 </button>
+  </view>
+  <view bindtap='getToken'>获取token</view>
+</view>

@@ -1,0 +1,31 @@
+<!--pages/adress/adress.wxml-->
+<view>
+  <form bindsubmit="formSubmit">
+    <view class="section">
+      <view class="section__title">收货人</view>
+      <input name="name" placeholder="昵称" value="{{adress.name}}" />
+    </view>
+    <view class="section">
+      <view class="section__title">手机号</view>
+      <input name="phone" placeholder="手机号" value="{{adress.phone}}" />
+    </view>
+    <view class="section">
+      <view class="section__title">地区选择</view>
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class="picker">
+          {{region[0]}},{{region[1]}},{{region[2]}}
+        </view>
+      </picker>
+      <input style="display:none" name="adress" value="{{region[0]}},{{region[1]}},{{region[2]}}"></input>
+    </view>
+    <view class="section">
+      <view class="section__title">地址详情</view>
+      <input name="adressdetails" placeholder="单元室" />
+    </view>
+    <button formType="submit">Submit</button>
+  </form>
+  <view class="list" wx:for="{{ NumberList }}" wx:key='key' data-index="index">
+  {{ item }} 
+    <text data-index="{{index}}" bindtap='upTop'>上移</text><text data-index="{{index}}" bindtap='shiftDown'>下移</text>
+  </view>
+</view>

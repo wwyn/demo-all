@@ -1,0 +1,19 @@
+<!--pages/from/from.wxml-->
+<!-- 表单提交 -->
+<view class="from">
+  <form bindsubmit="formSubmit">
+    <view class="name">
+      <view>*
+        <text>姓</text><text>名:</text>
+      </view>
+      <input name="name"></input>
+    </view>
+    <view class="number">
+      <view>*
+        <text>身份证号:</text>
+      </view>
+      <input name="number"></input>
+    </view>
+    <button class="submit" formType="submit">提交申请</button>
+  </form>
+</view>

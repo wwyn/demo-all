@@ -1,0 +1,142 @@
+/* pages/card/card.wxss */
+
+.dis {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.card {
+  border-top: 1px solid #ccc;
+  background-color: #ccc;
+  height: 100vh;
+}
+
+.card-head {
+  width: 200rpx;
+  height: 200rpx;
+  vertical-align: middle;
+  border: 1px solid #ccc;
+  border-radius: 6rpx;
+  margin-right: 20rpx;
+  position: relative;
+}
+.card-head image {
+  width: 100%;
+  height: 200rpx;
+}
+
+.card-user {
+  padding: 20rpx 30rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  margin-bottom: 30rpx;
+}
+
+.card-name {
+  flex: 1;
+}
+
+.section {
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.section__title {
+  margin-right: 30rpx;
+}
+
+.name {
+  border-bottom: 1px solid #ccc;
+}
+
+.card-name label {
+  width: 100rpx;
+}
+
+.job {
+  background-color: #fff;
+  padding: 30rpx 30rpx 50rpx;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+}
+
+.job label {
+  font-size: 30rpx;
+  width: 160rpx;
+}
+
+.section_gap {
+  padding: 30rpx;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.section_gap label {
+  border: 1px solid #ccc;
+  border-radius: 14rpx;
+  padding: 4rpx 20rpx;
+  box-sizing: border-box;
+  font-size: 26rpx;
+  margin-right: 20rpx;
+}
+
+.addtitle {
+  border: 1px solid #ccc;
+  border-radius: 14rpx;
+  padding: 4rpx 20rpx;
+  box-sizing: border-box;
+  font-size: 26rpx;
+  margin-right: 20rpx;
+}
+
+.section_gap .active {
+  border: 1px solid rgb(67, 182, 73);
+  color: rgb(67, 182, 73);
+}
+
+.section_gap label checkbox {
+  opacity: 0;
+  margin-bottom: 20rpx;
+  margin-left: -50rpx;
+}
+.moremassage {
+  background-color: #fff;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+.moremassage>view {
+  border: 1px solid #ccc;
+  width: 100%;
+  padding: 20rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+}
+.bb {
+  padding-bottom: 10rpx;
+  border-bottom: 1px solid #ccc;
+}
+.addImage {
+  position: relative;
+  width: 200rpx;
+}
+.addImage image {
+  margin-top: 10rpx;
+}
+.pic {
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  background-color: rgba(18, 19, 18,.4);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 28rpx;
+  color: #fff;
+}
+.pic image {
+  width: 50rpx;
+  height: 50rpx;
+  vertical-align: middle;
+}

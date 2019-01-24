@@ -1,0 +1,70 @@
+<!--pages/card/card.wxml-->
+<view>
+  <view class="card">
+    <form bindsubmit="formSubmit">
+     <view class="card-user dis">
+      <view class="card-head" bindtap='addImg'>
+        <image src="{{headImg}}"></image>
+        <view class="pic">
+          <image src="../../img/picture.png"></image>
+          更换头像
+        </view>
+      </view>
+      <view class="card-name">
+        <view class="section dis name">
+          <label class="section__title">姓名</label>
+          <input name="name" placeholder="点击编辑姓名" />
+        </view>
+        <view class="section dis">
+          <label class="section__title">电话</label>
+          <input name="phone" placeholder="点击编辑手机号码" />
+        </view>
+      </view>
+     </view>
+     <view class="job">
+      <view class="section dis">
+        <label class="section__title">公司</label>
+        <input name="company" placeholder="please input here" />
+      </view>
+      <view class="section dis">
+        <label class="section__title">职位</label>
+        <input name="post" placeholder="please input here" />
+      </view>
+      <view class="section dis">
+        <label class="section__title">邮箱</label>
+        <input name="email" placeholder="please input here" />
+      </view>
+      <view class="section dis">
+        <label class="section__title">联系地址</label>
+        <input name="adress" placeholder="please input here" />
+      </view>
+     </view> 
+      <view class="section_gap">
+        <view class="section__title">标签</view>
+        <checkbox-group name="checkbox" bindchange="checkboxChange">
+          <label class="addtitle" bindtap='addTitle'>+添加新的标签</label>
+          <label  wx:for="{{items}}" wx:key="{{ name }}" wx:for-item="item" class="{{item.checked ? 'active' : ''}}"><checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}</label>
+        </checkbox-group>
+      </view>
+      <view class="moremassage">
+        <view>
+          <view class="section__title bb">更多信息</view>
+          <input name="more" placeholder="点击编辑" />
+        </view>
+      </view>
+      <view class="addImage">
+        <image class="card-head" src="../../img/Bitmap.png"></image>
+        <view class="pic">
+          <image src="../../img/del.png"></image>
+        </view>
+      </view>
+      <view class="btn-area">
+        <button formType="submit">下一步</button>
+      </view>
+    </form>
+  </view>
+<!-- 弹框 -->
+  <modal hidden="{{hiddenmodalput}}" title="请输入标签" confirm-text="确定" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">  
+    <input type='text' value="{{tag}}" placeholder="请输入内容" auto-focus bindblur='inputVal'/>  
+</modal>  
+</view>

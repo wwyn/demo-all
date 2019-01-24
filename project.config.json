@@ -1,0 +1,170 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.0.4",
+	"appid": "wx182c3498961b826b",
+	"projectname": "ddd",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 20,
+			"list": [
+				{
+					"id": -1,
+					"name": "user",
+					"pathName": "pages/user/user",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "生成",
+					"pathName": "pages/generate/generate",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "提交",
+					"pathName": "pages/submit/submit",
+					"query": ""
+				},
+				{
+					"id": 4,
+					"name": "排行榜",
+					"pathName": "pages/ranking/ranking",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "购物车",
+					"pathName": "pages/shopping/shopping",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "个人信息",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "登录",
+					"pathName": "pages/login/login",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的优惠卷",
+					"pathName": "pages/discounts/discounts",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "优惠详情",
+					"pathName": "pages/detail/detail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/my/my",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "拖拽",
+					"pathName": "pages/drag/drag",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "拖拽2",
+					"pathName": "pages/drag2/drag",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "图表",
+					"pathName": "pages/chart/chart",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "上移下移",
+					"pathName": "pages/adress/adress",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "对话框",
+					"pathName": "pages/location/location",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "物流",
+					"pathName": "pages/physical/physical",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "活动",
+					"pathName": "pages/activity/activity",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "名片",
+					"pathName": "pages/card/card",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "check",
+					"pathName": "pages/check/check",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "地图",
+					"pathName": "pages/map/map",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "log",
+					"pathName": "pages/logs/logs",
+					"query": ""
+				}
+			]
+		}
+	}
+}

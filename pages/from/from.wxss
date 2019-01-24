@@ -1,0 +1,77 @@
+/* pages/from/from.wxss */
+.from {
+  width: 100%;
+  height: 1201rpx;
+  background-color: #F6F8FB;
+}
+.name view {
+  font-size: 30rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(221, 65, 71, 1);
+  margin-left: 39rpx;
+  padding-top: 42rpx;
+}
+
+.number view {
+  font-size: 30rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(221, 65, 71, 1);
+  margin-left: 39rpx;
+  margin-top: 49rpx;
+}
+
+.name text {
+  color: #666;
+  letter-spacing: 42rpx;
+}
+.name text:nth-child(2) {
+  color: #666;
+  letter-spacing: 0;
+}
+.number text {
+  color: #666;
+}
+
+.name input {
+  width: 690rpx;
+  height: 91rpx;
+  background: rgba(235, 238, 242, 1);
+  border-radius: 8rpx;
+  margin: 0 auto;
+  margin-top: 17rpx;
+  padding-left: 10rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(74, 74, 74, 1);
+}
+
+.number input {
+  width: 690rpx;
+  height: 91rpx;
+  background: rgba(235, 238, 242, 1);
+  border-radius: 8rpx;
+  margin: 0 auto;
+  margin-top: 17rpx;
+  padding-left: 10rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(74, 74, 74, 1);
+}
+
+.submit {
+  width: 670rpx;
+  height: 98rpx;
+  line-height: 98rpx;
+  background: rgba(52, 140, 248, 1);
+  border-radius: 8rpx;
+  position: absolute;
+  bottom: 30rpx;
+  left: 39rpx;
+  color: #fff;
+}

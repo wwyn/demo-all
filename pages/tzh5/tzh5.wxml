@@ -1,0 +1,4 @@
+<!--pages/tzh5/tzh5.wxml-->
+<view>
+  <web-view src="https://xiumi.us/#/studio/shop/paper?page=0&freefilter=all"></web-view>
+</view>

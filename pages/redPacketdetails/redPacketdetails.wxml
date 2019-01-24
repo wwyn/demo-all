@@ -1,0 +1,73 @@
+<!--pages/redPacketdetails/redPacketdetails.wxml-->
+<view>
+  <view class="jiang">
+    <image src="../../img/bbbb.png"></image>
+    <view class="jiang-title">上汽集团周年庆 喊你来抽奖!</view>
+    <view class="jiang-time">2018.08.01 20:20 自动开奖</view>
+  </view>
+  <view class="zanzhu">
+    <view class="zanzhu-top">
+      <view><text class="zanzhu-top-text"></text>赞助商</view>
+      <view>上汽通用</view>
+    </view>
+    <view class="zanzhu-botton">通用汽车公司是全球最大的汽车公司之一，历史可追溯到1908年。通用汽车公司进入中国已超过90年，在中国的发展愿景。</view>
+  </view>
+  <view class="canyu" wx:if="{{!wlq}}">
+    <view wx:if="{{ isparticipate }}">
+       <view class="success">参与成功，等待开奖</view>
+       <view class="tishi">温馨提示：邀请队友会增加中奖概率</view>
+    </view>
+    <view class="choujiang" bindtap='participate'>{{ participate }}</view>
+  </view>
+  <view class="weilingqu" wx:if="{{wlq}}">
+    <view class="weilingqu-box">
+      <view class="zj" wx:if="{{ isZhong }}">
+          <view>恭喜，您中奖了</view>
+          <image src="../../img/zhong.png"></image>
+          <view>多功能榨汁机</view>
+          <view class="quduijiang">去兑奖</view>
+        </view>
+        <view class="mz" wx:if="{{ !isZhong }}">
+          <view class="model-title">很遗憾没中奖</view>
+          <image src="../../img/wei.png"></image>
+        </view>
+        <view class="md">中奖者名单</view>
+        <view class="zjmd">
+          <image src="../../img/Bitmap.png"></image>
+        </view>
+    </view>
+  </view>
+ <view class="canyu2">
+    <view class="people">{{ wlq?'感谢':'已有' }}122人参与 <text>查看全部 ></text></view>
+    <view class="touxiang">
+      <image src="../../img/Bitmap.png"></image>
+    </view>
+  </view> 
+  <view class="huodongjianjie">
+    <view><text class="huodongjianjie-text"></text>活动简介</view>
+    <view>一.抽奖时间：本次抽奖活动于一期1、2号楼开盘当日，2017年10月21日 14：00 点开始。 二.奖品设置：本次活动共设奖项： 一等奖：共4 名（奖品：双开门冰箱、空调、抽油烟机、电视任选一样，先抽到先选）； 二等奖：5 名（奖品：滚筒洗衣机（海尔）、直饮机任选一样，先抽到先选）； 三等奖：若干名（奖品：消毒柜、微波炉（海尔）、饮水机（安吉尔）任选一样，先抽到先选。）； 四等奖：若干名（奖品：电磁炉、电饭煲（苏泊尔）、豆浆机（九阳）、干衣机、任选一样）。 纪念奖：雨伞、小太阳二选一，先抽到先选。 为保证公平公正防作假，抽到奖球必须是活动方指定已奖球才能计入奖项。 三.抽奖资格： 大奖（含一、二、三、四等奖）抽奖资格：购房者须于2017年10月21日前或当日付清“天利人和”1、2号楼首付款或总房款，并且签定认购协议后方可参加本次抽奖。逾期参与将视为购房者抽奖弃权。 小奖（含四等奖、纪念奖。）抽奖资格：购房者须于2017年10月21日前或当日签定“天利人和”1、2号楼认购协议后方可参加本次抽奖。逾期参与将视为购房者抽奖弃权。但逾期补款将退回所中奖品！ 四.抽奖规则：本次抽奖中奖率100％，活动方按抽奖者先中先选择奖品，抽奖者只能选取所获奖项同等级奖品栏内其中一样奖品。若抽奖者选择的奖品活动方已全部发完，抽奖者则选择对应奖项的同等级其他剩余奖品，不得提出异议。 购房者所认购的房源只有一次抽奖机会，不得试抽，购房者在了解抽奖方式后，须在现场抽奖工作人员陪同下进行抽奖，否则抽奖无效，活动方可将购房者视为弃权。 五.抽奖顺序： 按照客户办理完对应抽奖资格对应手续时间先后顺序安排抽奖顺序（先办完先排号先抽奖）。 六.中奖与领奖流程：中奖后，抽奖处会发放相应兑奖券，并给中奖客户进行中奖登记，客户须保留好兑奖券（若中奖者遗失凭证或未予中奖后进行中奖登记，活动方将视为自动放弃兑奖，不予发放奖品。）奖品需等所有认购客户抽奖环节结束之后，统一找奖品发放处，发放，后由中奖者自行安排搬回家。 八.公平保障：抽奖前：主持人会当面将一等奖、二等奖大奖给观众鉴定，再当众把大奖放进全透明抽奖池里面，由购房者，自行抽奖，以保证抽奖公平公正。 九.奖品售后处理：奖品售后与活动方无关，中奖者自行与商家联系处理。</view>
+  </view>
+  <button open-type='share' animation="{{animation}}" hidden='{{!hidden}}' class="share" bindtap='sharepeople'>分享给好友</button>
+  <view class="model" wx:if="{{ isModel }}" catchtap='delModel'>
+    <view class="model-content" catchtap='zmodel'>
+        <view class="del">
+          <image src="../../img/del.png" bindtap='delModel'></image>
+        </view>
+        <view class="zj" wx:if="{{ isZhong }}">
+          <view>恭喜，您中奖了</view>
+          <image src="../../img/zhong.png"></image>
+          <view>多功能榨汁机</view>
+        </view>
+        <view class="mz" wx:if="{{ !isZhong }}">
+          <view class="model-title">很遗憾没中奖</view>
+          <image src="../../img/wei.png"></image>
+        </view>
+        <view class="md">中奖者名单</view>
+        <view class="zjmd">
+          <image src="../../img/Bitmap.png"></image>
+        </view>
+        <view class="look">查看全部 ></view>
+        <view class="qdj">去兑奖</view>
+    </view>
+  </view>
+</view>

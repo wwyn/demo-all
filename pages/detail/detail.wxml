@@ -1,0 +1,52 @@
+<!--pages/detail/detail.wxml-->
+<view class="box">
+  <view class="present">
+    <view>状态：<text>申请驳回</text></view>
+    <view>审核意见：这里是描述字段</view>
+    <view><text></text>寄送信息</view>
+    <view class="userInfor">
+      <view>诺诺</view>
+      <view class="userInfor-mobile">
+        <view>13866552782</view>
+        <view>上海市 闵行区 漕河泾</view>
+      </view>
+    </view>
+  </view>
+  <image class="bmx" src="../../img/address.png"></image>
+  <view class="massage">
+    <view class="gs-massage"><text></text>寄送信息</view>
+    <view class="fp">
+      <view>购物凭证：</view>
+      <view class="img" wx:for="{{ulrList}}" wx:for-item="item" wx:key="key">
+        <image src="{{ item }}"></image>
+      </view>
+      <view class="shangchuan" bindtap='uploading'>
+        <view>+</view>
+        <view>上传发票</view>
+      </view>
+    </view>
+    <view class="user-massage">
+      <view>购车人姓名：</view>
+      <view>VIN码：</view>
+      <view>购车品牌：</view>
+      <view>开票日期：</view>
+    </view>
+  </view>
+  <view class="lipin">
+    <view class="dingdan-xiangqing">
+      <image src="../../img/bbbb.png"></image>
+      <view class="dingdan-text">
+        <view>别克威朗权益蓝牙音响</view>
+        <view>价值1999元权益礼包</view>
+        <view>
+          <view>适用于别克君威B类车</view>
+          <view>2018.9.1-2018.12.31</view>
+        </view>
+      </view>
+    </view>
+    <view class="present-box">
+        <view class="present-name">礼券权益<text>迷你USB充电器一台</text></view>
+        <image src="../../img/Shape.png"></image>
+    </view>
+  </view>
+</view>

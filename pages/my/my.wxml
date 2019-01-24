@@ -1,0 +1,43 @@
+<!--pages/my/my.wxml-->
+<view class="my-box">
+  <view class="my">
+    <image src="../../img/Bitmap.png"></image>
+    <view class="my-name">
+      <view>诺诺</view>
+      <view>13866552782</view>
+    </view>
+    <view class="my-buton">
+      <button>常见问题</button>
+      <button>在线客服</button>
+    </view>
+  </view>
+  <view class="my-liquan">
+    <view class="my-liquan-title">我的礼券</view>
+    <view class="my-liquan-icon">
+      <view wx:for="{{ liquanList }}" wx:for-item="item" wx:key="key">
+        <text wx:if="{{ isnum }}">1</text>
+        <image src="{{item.url}}"></image>
+        <view>{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="my-adress">
+    <view>收货地址</view>
+    <view class="my-adress-text">
+      <radio-group class="radio-group" bindchange="radioChange">
+        <label class="radio" wx:for-items="{{myAdress}}" wx:key="key" wx:index="index">
+          <view style="display:flex;margin-top: 20rpx;">
+            <radio value="{{item.name}}" checked="{{item.checked}}" />
+            <view class="adress-name">{{item.name}} {{item.phone}}</view>
+          </view>
+          <view class="{{ item.checked?'active':'' }} adress">{{item.adress}}<image class="adress-editor" catchtap='editor' src="../../img/share.png" data-adress="{{item}}"></image></view>
+        </label>
+      </radio-group>
+      <view bindtap='addAdress'>+ 新增</view>
+    </view>
+  </view>
+  <view>
+    <image src="../../img/"></image>
+    <image src=""></image>
+  </view>
+</view>
